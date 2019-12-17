@@ -11,6 +11,10 @@ export class PostsComponent implements OnInit {
 
   isUsers:boolean = false
   isSearch:boolean = false
+  search_title_input: string
+  search_body_input:string
+
+
   constructor(public postSrv:PostsService, public userSrv:UsersService) { 
     this.userSrv.data.subscribe(users => {
       if (users && users.length > 0) {
