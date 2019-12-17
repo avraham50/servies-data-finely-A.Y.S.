@@ -1,0 +1,40 @@
+.panel-list >div{
+    padding: 1vw;
+    margin: 3vw;
+    background-color: rgb(233, 140, 186);
+    border: solid purple;
+    border-radius: 25px;
+    transition: all 1s;
+}
+button{
+    font-size: 3vw;
+    margin: 1vw;
+    padding: 1vw;
+    border: rgb(78, 126, 5);
+    background-color: rgb(20, 197, 94);
+}
+.menu {
+    font-size: 3vw;
+    margin: 1vw;
+    padding: 1vw;
+    border: rgb(78, 126, 5);
+    background-color: rgb(190, 245, 213);
+}
+.warning{
+    top: 20%;
+    color: red;
+    font-size: 8vw;
+    text-align: center;
+}
+.mat-list-base .mat-list-item .mat-list-item-content, .mat-list-base .mat-list-option .mat-list-item-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 16px;
+    position: relative;
+    height: inherit;
+}
+.input-group{
+    left: 25% ;
+}

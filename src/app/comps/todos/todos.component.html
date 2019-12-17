@@ -1,0 +1,47 @@
+<p>todos works!</p>
+
+
+
+
+
+
+
+    <h1 class="select">The list of todoList </h1>
+    <button mat-button [matMenuTriggerFor]="menu">
+        Menu
+    </button>
+    <!-- <span>
+        <input type="text" class="input-search" (input)="getTodosBySearch()">
+    </span> -->
+    <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+            <span class="input-group-text" >Search</span>
+        </div>
+        <input type="text" class="input-search"
+         aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-lg"
+          (input)="getTodosBySearch()">
+    </div>
+    <mat-menu #menu="matMenu">
+        <button class="menu" mat-menu-item
+         (click)="getAllTodos()">
+            all todos
+        </button>
+        <button *ngIf="userSrv.currentUser"
+         class="menu" mat-menu-item
+          (click)="getTodosByUserIds(userSrv.currentUser.id)">
+            todo from the user
+        </button>
+    </mat-menu>
+    <div class="warning" *ngIf="!userSrv.currentUser">
+        <div> warning! </div>A user is not selected
+    </div>
+    <div>
+
+    <div class="panel-list" >
+
+        <div *ngFor="let t of todosList">
+            <todo [todo]="t"></todo>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+.mat-card>.mat-card-actions:last-child {
+    margin-bottom: -8px;
+    padding-bottom: 0;
+    background-color: lightblue;
+}
+
+.mat-card-content>:last-child:not(.mat-card-footer), .mat-card>:last-child:not(.mat-card-footer) {
+    margin-bottom: 0;
+    background-color: rgb(13, 188, 241);
+}
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    background-color: rgb(96, 203, 238);
+}
+.mat-expansion-panel-body {
+    padding: 0 24px 16px;
+    background-color: rgb(172, 210, 224);
+}
+
+
+

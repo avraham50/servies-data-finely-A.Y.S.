@@ -1,0 +1,71 @@
+<p>posts works!</p>
+
+
+
+
+
+
+<!-- <button mat-button [matMenuTriggerFor]="menu">
+    Menu 
+</button>
+
+<mat-menu class="menu" #menu="matMenu">
+    <button class="menu" mat-menu-item>all todos</button>
+    <button class="menu" mat-menu-item>todo from the user</button>
+</mat-menu> -->
+
+<div class="input-group input-group-lg">
+    <div class="input-group-prepend">
+        <span class="input-group-text">Search by title</span>
+    </div>
+    <input [(ngModel)]="search_title_input">
+</div>
+
+<div class="input-group input-group-lg">
+    <div class="input-group-prepend">
+        <span class="input-group-text">Search by body</span>
+    </div>
+    <input [(ngModel)]="search_body_input">
+</div>
+
+<div *ngIf="isUsers">
+    <mat-accordion >
+        
+            <mat-expansion-panel *ngFor="let p of postSrv.data
+             | async
+             | pipeSearch : search_title_input : 'title'
+             | pipeSearch : search_body_input  : 'body'">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        {{p.title}}
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        {{ userSrv.getAllNameById(p.userId) }}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+
+                <post-item [post]="p"></post-item>
+
+            </mat-expansion-panel>
+        
+
+    </mat-accordion>
+    <!-- <mat-accordion *ngIf="isSearch">
+    
+        <mat-expansion-panel *ngFor="let p of postSrv.data | async">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{p.title}}
+                </mat-panel-title>
+                <mat-panel-description>
+                    {{ userSrv.getAllNameById(p.userId) }}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+    
+            <post-item [post]="p"></post-item>
+    
+        </mat-expansion-panel>
+    
+    
+    </mat-accordion> -->
+</div>

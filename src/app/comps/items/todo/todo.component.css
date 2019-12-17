@@ -1,0 +1,15 @@
+div{
+    text-align: left;
+    padding: 0% 0% 1% 6%;
+    
+}
+
+
+
+div > h3{
+    text-align: left 5%;
+}
+.mat-list-base .mat-list-item {
+    text-align: center;
+    font-size: 4vw;
+}

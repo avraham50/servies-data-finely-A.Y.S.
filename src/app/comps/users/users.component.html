@@ -1,0 +1,35 @@
+<p>users works!</p>
+
+
+
+
+<br>
+<div class="card mb-3" style="max-width: 540px;"
+    *ngFor="let u of userSrv.data | async" appChangeMat>
+    <div class="row no-gutters" >
+        <div class="col-md-4">
+            <img appImage src={{img}} class="card-img" alt="...">
+        </div>
+        <div class="col-md-8" >
+            <div class="card-body" (click)="selectAUser(u)">
+                <h5 class="card-title">user.name: {{u.name}}</h5>
+                <p class="card-text">user.id: {{u.id}}</p>
+                <p class="card-text">user.userId: {{u.email}}</p>
+                <p class="card-text" *ngIf="u.address">
+                    <small class="text-muted">
+                        suite: {{u.address.suite}} 
+                    </small>
+                    <small class="text-muted">
+                        sity: {{u.address.city}}
+                    </small>
+                    <small class="text-muted">
+                        street: {{u.address.street}}
+                    </small>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<!-- <div>adUser addNewItem(user)</div> -->
