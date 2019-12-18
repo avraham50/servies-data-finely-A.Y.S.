@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TodosService } from 'src/app/services/todos.service';
 import { Todo } from 'src/app/models/todo';
 import { UsersService } from 'src/app/services/users.service';
+import { TytleService } from '../../services/tytle.service';
 
 @Component({
   selector: 'todos',
@@ -18,11 +19,12 @@ export class TodosComponent implements OnInit {
   usersId:number
   inputSearch:HTMLInputElement
   constructor(public todoSrv:TodosService,
-    public userSrv:UsersService
+    public userSrv:UsersService,
+    public tytleSrv: TytleService
     ) { }
 
   ngOnInit() {
-    
+    this.tytleSrv.tytleOfPage = 'Todos'
     if (!localStorage.getItem('todos')){
     this.todoSrv.getTodosByAllUsers()
     .subscribe(d => {

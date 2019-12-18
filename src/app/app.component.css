@@ -4,8 +4,3 @@ mat-form-field {
 .space{
   height: 80px;
 }
-navigation{
-  position: fixed;
-  left: 0;
-  top: 0;
-}

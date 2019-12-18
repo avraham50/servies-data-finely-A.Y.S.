@@ -22,3 +22,9 @@ button{
     font-size: 12px;
     font-family: 'Calligraffitti', cursive;
 }
+.alert{
+    padding-left: 25%;
+    padding-right: 25%;
+    color: red;
+    background-color: rgb(241, 201, 201);
+}

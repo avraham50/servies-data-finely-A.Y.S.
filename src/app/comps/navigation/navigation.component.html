@@ -8,6 +8,7 @@
     <li><a routerLink="/todos">todos</a></li>
     <li><a routerLink="/login">Log-in</a></li>
     <div>hello {{userSrv.demoCurentUser}}</div>
+    <div class="pages"> {{tytleSrv.tytleOfPage}}</div>
 
     <!-- <li><a>hello {{thisU.currentUserDemo}}</a></li> -->
    
@@ -18,3 +19,11 @@
         </div>
     </li>
 </ul>
+
+<h1 *ngIf="userSrv.currentUser">
+     The selectuser: {{userSrv.currentUser.name}}
+    </h1>
+<h1 class="warning" *ngIf="!userSrv.currentUser">
+    warning! A user is not selected
+    </h1>
+

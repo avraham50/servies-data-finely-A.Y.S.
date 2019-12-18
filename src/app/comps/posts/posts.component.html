@@ -28,31 +28,13 @@
     <input [(ngModel)]="search_body_input">
 </div>
 
-<div *ngIf="isUsers">
-    <mat-accordion >
-        
-            <mat-expansion-panel *ngFor="let p of postSrv.data
-             | async
-             | pipeSearch : search_title_input : 'title'
-             | pipeSearch : search_body_input  : 'body'">
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        {{p.title}}
-                    </mat-panel-title>
-                    <mat-panel-description>
-                        {{ userSrv.getAllNameById(p.userId) }}
-                    </mat-panel-description>
-                </mat-expansion-panel-header>
 
-                <post-item [post]="p"></post-item>
-
-            </mat-expansion-panel>
-        
-
-    </mat-accordion>
-    <!-- <mat-accordion *ngIf="isSearch">
+<mat-accordion >
     
-        <mat-expansion-panel *ngFor="let p of postSrv.data | async">
+        <mat-expansion-panel *ngFor="let p of postSrv.data
+            | async
+            | pipeSearch : search_title_input : 'title'
+            | pipeSearch : search_body_input  : 'body'">
             <mat-expansion-panel-header>
                 <mat-panel-title>
                     {{p.title}}
@@ -61,11 +43,10 @@
                     {{ userSrv.getAllNameById(p.userId) }}
                 </mat-panel-description>
             </mat-expansion-panel-header>
-    
+
             <post-item [post]="p"></post-item>
-    
+
         </mat-expansion-panel>
     
-    
-    </mat-accordion> -->
-</div>
+</mat-accordion>
+   

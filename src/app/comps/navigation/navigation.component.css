@@ -61,3 +61,26 @@ ul {
     text-shadow: yellow 2px;
     text-shadow: 3px yellow;
   }
+  h1{
+    background-color: rgb(194, 236, 197);
+    padding-top: 100px;
+    text-align: center;
+    transition: all 3s;
+  }
+  .pages{
+    color: rgb(0, 17, 255);
+    font-size: xx-large;
+    padding-top: 0;
+    padding-block-start: 0;
+    padding-left: 1%;
+  }
+  h1:hover{
+    padding-top: 0;
+  }
+  h2{
+    display: inline;
+  }
+  .warning{
+    color: red;
+    background-color: yellow;
+  }

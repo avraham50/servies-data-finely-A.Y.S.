@@ -1,1 +1,20 @@
-<p>photos works!</p>
+
+
+<mat-accordion>
+
+    <mat-expansion-panel *ngFor="let p of photoSrv.data| async"> 
+       <mat-expansion-panel-header >
+            <mat-panel-title> 
+                <h3>{{p.id}}</h3>
+            </mat-panel-title>
+            <mat-panel-description>
+                
+                <!-- {{ photoSrv.getAllNameById(userSrv.currentUser) }} -->
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <!-- <photo-item [photo]="p"></photo-item> -->
+
+    </mat-expansion-panel> 
+
+</mat-accordion>

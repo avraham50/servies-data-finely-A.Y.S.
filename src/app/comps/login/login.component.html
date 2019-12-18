@@ -8,8 +8,16 @@
     <label for="pass">Password </label>
     <input id="pass" type="password">
 </div>
-<button >log-in</button>
-<!-- <button (click)="openPath()">log-in</button> -->
+<button (click)="openPath()">log-in</button>
+
+</div>
+
+
+<div *ngIf="!loginSrv.isLogin" class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Error!</h4>
+    <p>you can't get into the aplication befor you confirm log-in!</p>
+    <hr>
+    <p class="mb-0">this is the ordinance of the system.</p>
 </div>
 
 

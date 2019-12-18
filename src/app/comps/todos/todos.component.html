@@ -1,4 +1,3 @@
-<p>todos works!</p>
 
 
 
@@ -6,13 +5,12 @@
 
 
 
-    <h1 class="select">The list of todoList </h1>
+
+<div class="first-line">
     <button mat-button [matMenuTriggerFor]="menu">
         Menu
     </button>
-    <!-- <span>
-        <input type="text" class="input-search" (input)="getTodosBySearch()">
-    </span> -->
+   
     <div class="input-group input-group-lg">
         <div class="input-group-prepend">
             <span class="input-group-text" >Search</span>
@@ -33,11 +31,10 @@
             todo from the user
         </button>
     </mat-menu>
-    <div class="warning" *ngIf="!userSrv.currentUser">
-        <div> warning! </div>A user is not selected
-    </div>
-    <div>
+</div>
 
+
+<div>
     <div class="panel-list" >
 
         <div *ngFor="let t of todosList">

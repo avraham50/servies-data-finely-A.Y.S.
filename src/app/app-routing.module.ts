@@ -12,10 +12,14 @@ import { LoginComponent } from './comps/login/login.component';
 const routes: Routes = [
   { path: 'photos', component: PhotosComponent},
   { path: 'posts', component: PostsComponent},
-  { path: 'users', component: UsersComponent},
+  { path: 'users', component: UsersComponent,},
   { path: 'comment_posts', component: CommentPostsComponent},
   { path: 'todos', component: TodosComponent},
-  { path: 'login', component: LoginComponent}
+  { path: 'login', component: LoginComponent},
+
+  { path: '', component: LoginComponent },
+  { path: '**', component: LoginComponent},
+
 
 ];
 

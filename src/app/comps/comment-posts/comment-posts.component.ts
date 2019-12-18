@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { User } from 'src/app/models/user';
 import { UsersService } from 'src/app/services/users.service';
+import { TytleService } from '../../services/tytle.service';
 
 @Component({
   selector: 'comment-posts',
@@ -11,12 +12,14 @@ import { UsersService } from 'src/app/services/users.service';
 export class CommentPostsComponent implements OnInit {
 
   constructor(public userSrv:UsersService,
-    public bg:FormBuilder
+    public tytleSrv: TytleService,
+    public bg: FormBuilder,
+    
     ) { }
 
   ngOnInit() {
     console.log('comment-posts');
-    
+    this.tytleSrv.tytleOfPage = 'Add user'
   }
 
   newUserForm = this.bg.group({

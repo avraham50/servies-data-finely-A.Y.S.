@@ -19,4 +19,11 @@ button{
     border: rgb(78, 126, 5);
     background-color: rgb(190, 245, 213);
 }
+.input-group{
+    padding: 15px;
+}
+.input-group-text {
+    min-width: 175px;
+}
+
 
